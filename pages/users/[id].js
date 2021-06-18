@@ -11,7 +11,7 @@ export default function user(){
                 User Details
             </h2>
             <p>
-                User ID: {router.query.user}
+                User ID: {router.query.id}
             </p>
         </div>
     )
