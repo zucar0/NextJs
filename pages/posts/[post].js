@@ -7,9 +7,11 @@ export default function post(){
 
     return(
         <div>
+            {/*  */}
             <h2>
                 Post Details: 
             </h2>
+            {/*  El nombre de la propiedad corresponde al nombre del archivo */}
             <p>
                 Post ID: {router.query.post}
             </p>
