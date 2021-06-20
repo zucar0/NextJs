@@ -1,23 +1,21 @@
 import { useRouter } from 'next/router';
-import Navbar from '../../components/navbar';
-
+import Title from '../../components/title';
+import Layout from '../../components/layout';
 export default function post(){
 
     const router = useRouter();
     console.log(router);
 
     return(
-        <div>
-            <Navbar/>
-            {/*  */}
-            <h2>
+        <Layout>
+            <Title>
                 Post Details: 
-            </h2>
+            </Title>
             {/*  El nombre de la propiedad corresponde al nombre del archivo */}
             <p>
                 Post ID: {router.query.id}
             </p>
-        </div>
+        </Layout>
     )
 
 }
