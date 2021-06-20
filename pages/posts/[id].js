@@ -13,7 +13,7 @@ export default function post(){
             </h2>
             {/*  El nombre de la propiedad corresponde al nombre del archivo */}
             <p>
-                Post ID: {router.query.post}
+                Post ID: {router.query.id}
             </p>
         </div>
     )
