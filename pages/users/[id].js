@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Navbar from '../../components/navbar';
 
 export default function user(){
 
@@ -7,6 +8,7 @@ export default function user(){
 
     return(
         <div>
+            <Navbar/>
             <h2>
                 User Details
             </h2>

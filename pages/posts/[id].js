@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Navbar from '../../components/navbar';
 
 export default function post(){
 
@@ -7,6 +8,7 @@ export default function post(){
 
     return(
         <div>
+            <Navbar/>
             {/*  */}
             <h2>
                 Post Details: 
