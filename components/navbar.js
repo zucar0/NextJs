@@ -17,6 +17,16 @@ export default function Navbar(){
             {/* <Link href='/posts/[id]' as={`/posts/${5}`}>
                 <a>Post #5</a>
             </Link> */}
+            <style>
+                {`
+                    nav{
+                        padding-top: 10px;
+                    }
+                    a{
+                        padding: 0 10px;
+                    }
+                `}
+            </style>
         </nav>
     )
 }
