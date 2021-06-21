@@ -1,8 +1,21 @@
+import Title from '../components/title';
+import Layout from '../components/layout';
+
 export default function Home(){
 	return(
-	<div>
-		<h1>Home Page</h1>
+	<Layout>
+		<Title>Home Page</Title>
 		<p> Aprendamos NextJS con Webtoriales!</p>
-	</div>
+		<style>
+			{`
+				p{
+					color: darkgray;
+				}
+				p:hover{
+					color: darkred;
+				}
+			`}
+		</style>
+	</Layout>
 	 )
 }
