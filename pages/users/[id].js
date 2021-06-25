@@ -12,7 +12,7 @@ export default function User({user}){
     return(
         <Layout>
             <Title>User ID {user.id}</Title>
-            <div>
+            <div className='card'>
                 <h3>User</h3>
                 <p>Name: {user.name}</p>
                 <p>Email: {user.email}</p>
@@ -56,22 +56,30 @@ export default function User({user}){
     )
 }
 export async function getStaticPaths(){
+    const res = await fetch('https://jsonplaceholder.typicode.com/users')
+    const users = await res.json();
+    // const paths = [
+    //     {   params: { id: '1' } },
+    //     {   params: { id: '2' } },
+    //     // {   params: { id: '3' } },
+    //     // {   params: { id: '4' } },
+    //     // {   params: { id: '5' } },
+    //     // {   params: { id: '6' } },
+    //     // {   params: { id: '7' } },
+    //     // {   params: { id: '8' } },
+    //     // {   params: { id: '9' } },
+    //     // {   params: { id: '10' } },
+    // ];
 
-    const paths = [
-        {   params: { id: '1' } },
-        {   params: { id: '2' } },
-        // {   params: { id: '3' } },
-        // {   params: { id: '4' } },
-        // {   params: { id: '5' } },
-        // {   params: { id: '6' } },
-        // {   params: { id: '7' } },
-        // {   params: { id: '8' } },
-        // {   params: { id: '9' } },
-        // {   params: { id: '10' } },
-    ];
+    const paths = users.map(user =>{
+        return{
+            params: {id: `${user.id}`}
+        }
+    })
+
     return{
         paths,
-        fallback: false
+        fallback: true
     }
 }
 export async function getStaticProps({params}){
@@ -82,7 +90,7 @@ export async function getStaticProps({params}){
 
     return{
         props: {
-            result: await user
+            user
         }
     }
 }
