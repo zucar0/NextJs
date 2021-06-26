@@ -1,3 +1,4 @@
+import Head from 'next/dist/next-server/lib/head';
 import Title from '../../components/title';
 import Layout from '../../components/layout';
 import Link from 'next/link';
@@ -6,6 +7,10 @@ export default function Users({users}){
 	return(
 		
 		<Layout>
+			<Head>
+				<title>Landing Page de Users</title>
+				<meta name="description" content="En este curso de Webtoriales aprendemos sobre Next.Js" />
+			</Head>
 			<Title>Users PAge </Title>
 			<div className='grid'>
 				{users.map(user =>{
