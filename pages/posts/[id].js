@@ -6,6 +6,10 @@ export default function post( { post } ){
     // console.log(router);
     return(
         <Layout>
+            {/* <Head>
+                <title>Post #{post.id}</title>
+                <meta name="description" content="En este curso de Webtoriales aprendemos sobre Next.Js" />
+            </Head> */}
             <Title>
                 Post Details: 
             </Title>

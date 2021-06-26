@@ -1,3 +1,4 @@
+import Head from "next/dist/next-server/lib/head";
 import Title from "../../components/title";
 import Layout from "../../components/layout";
 import React from "react";
@@ -19,6 +20,10 @@ export default function Posts( {posts} ){
 
 	return(
 		<Layout>
+			<Head>
+				<title>Landing Pages de Posts </title>
+				<meta name="description" content="En este curso de Webtoriales aprendemos sobre Next.Js" />
+			</Head>
 			<Title>Posts Page </Title>
 			<div className='grid'>
 				{posts.map(post =>{
